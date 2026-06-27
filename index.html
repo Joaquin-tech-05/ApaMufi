@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>A.PA.MU.FI - Asociación Pampeana de Musculación y Fitness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#773300",
+                      "on-background": "#1c1b1b",
+                      "tertiary-fixed": "#ffdbca",
+                      "error-container": "#ffdad6",
+                      "white": "#FFFFFF",
+                      "on-surface-variant": "#424751",
+                      "surface-container-highest": "#e5e2e1",
+                      "inverse-primary": "#a6c8ff",
+                      "primary": "#003b72",
+                      "background": "#fcf9f8",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#001c3b",
+                      "tertiary": "#642a00",
+                      "surface-container-high": "#ebe7e7",
+                      "surface-container": "#f0edec",
+                      "on-secondary-container": "#fffbff",
+                      "secondary-fixed": "#ffdad6",
+                      "outline": "#727782",
+                      "surface-container-low": "#f6f3f2",
+                      "tertiary-fixed-dim": "#ffb68e",
+                      "secondary": "#bb0014",
+                      "on-primary-container": "#a5c7ff",
+                      "on-secondary-fixed": "#410002",
+                      "secondary-container": "#e51d24",
+                      "on-secondary-fixed-variant": "#93000d",
+                      "on-tertiary-container": "#ffb48b",
+                      "primary-fixed-dim": "#a6c8ff",
+                      "surface": "#fcf9f8",
+                      "surface-variant": "#e5e2e1",
+                      "outline-variant": "#c2c6d3",
+                      "surface-dim": "#dcd9d9",
+                      "secondary-fixed-dim": "#ffb4ac",
+                      "surface-alt": "#F8F9FA",
+                      "on-error-container": "#93000a",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#1d5fa8",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#331200",
+                      "on-surface": "#1c1b1b",
+                      "tertiary-container": "#883b00",
+                      "inverse-surface": "#313030",
+                      "primary-container": "#00529b",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#004787",
+                      "inverse-on-surface": "#f3f0ef",
+                      "surface-bright": "#fcf9f8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "section-gap": "80px",
+                      "base": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Oswald"
+                      ],
+                      "headline-lg": [
+                              "Oswald"
+                      ],
+                      "headline-md": [
+                              "Oswald"
+                      ],
+                      "headline-lg-mobile": [
+                              "Oswald"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "38px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            visibility: hidden;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+            visibility: visible;
+        }
+        
+        /* Custom Scrollbar for a more premium feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fcf9f8; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c2c6d3; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #727782; 
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md dark:bg-on-background/90 border-b border-outline-variant dark:border-outline/30 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 p-2 rounded-full md:hidden" id="menu-btn">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-primary dark:text-white" href="#">A.PA.MU.FI</a>
+</div>
+<!-- Desktop Nav (Hidden on Mobile) -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary font-semibold border-b-2 border-primary font-label-sm text-label-sm uppercase" href="#inicio">Inicio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="#torneos">Eventos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="#cursos">Cursos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-sm text-label-sm uppercase" href="#contacto">Contacto</a>
+</nav>
+<a class="bg-primary hover:bg-primary-container text-white px-4 py-2 rounded-DEFAULT font-label-sm text-label-sm uppercase tracking-wider transition-all duration-200 hover:-translate-y-[2px] shadow-sm" href="#contacto">
+                Asociarme
+            </a>
+</div>
+</header>
+<!-- NavigationDrawer (Mobile Only) -->
+<div class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 rounded-r-none bg-surface shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="nav-drawer">
+<div class="p-6 border-b border-outline-variant">
+<div class="flex justify-between items-center">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">A.PA.MU.FI</span>
+<button class="text-on-surface-variant p-2" id="close-menu-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<nav class="flex-1 overflow-y-auto py-4">
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-xl mx-2 px-4 py-3 font-body-lg text-body-lg mb-1" href="#">
+<span class="material-symbols-outlined">home</span>
+                Inicio
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#">
+<span class="material-symbols-outlined">corporate_fare</span>
+                Quiénes somos
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#torneos">
+<span class="material-symbols-outlined">event</span>
+                Eventos
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#entrenamiento">
+<span class="material-symbols-outlined">fitness_center</span>
+                Entrenamiento Personalizado
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#torneos">
+<span class="material-symbols-outlined">military_tech</span>
+                Torneo de Fisicoculturismo
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#cursos">
+<span class="material-symbols-outlined">school</span>
+                Cursos
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#galeria">
+<span class="material-symbols-outlined">collections</span>
+                Galería
+            </a>
+<a class="flex items-center gap-4 text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-3 mx-2 rounded-xl font-body-lg text-body-lg mb-1" href="#contacto">
+<span class="material-symbols-outlined">mail</span>
+                Contacto
+            </a>
+</nav>
+</div>
+<!-- Drawer Overlay -->
+<div class="fixed inset-0 bg-on-background/50 z-[55] hidden opacity-0 transition-opacity duration-300 md:hidden" id="drawer-overlay"></div>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[795px] flex items-center justify-center pt-16 pb-32 overflow-hidden bg-on-background" id="inicio">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="A powerful, high-contrast photograph of competitive bodybuilders posing on a professional stage under dramatic, high-key spotlights. The atmosphere is intense, disciplined, and prestigious, embodying a 'Federation Modernism' aesthetic. Deep shadows contrast with bright highlights, emphasizing muscular definition. The colors are predominantly deep navys and blacks, punctuated by the vibrant blue and white of an Argentine flag subtly draped in the background. The mood is triumphant and official." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0Fn9745vaYW2ef9L6WO5JmK6bbKFnR3eTOZ0bxbjgmrCMldphZ5qej2ZOeXfsapZHR2miMjzMM2rnj5rtYvEkAZvz5qWpvpBS1xg6548viIy0lVRJzvn1tVHoNjGb2nojmpj96nyEFxdE-RGBXo9RshJCQRKkuRfhLbrMFS3UNoF4kgGzBTFa33WIRV0UE3o4Yg4T0W01FNhvwF0zNvtTI88Q25_InAQKaAJfoQHfLwGWmdbmAgOGc80CejWOaZzlm-8qQ5IWk2QO')"></div>
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-t from-on-background via-on-background/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-background/90 via-on-background/50 to-transparent"></div>
+</div>
+<div class="relative z-10 container mx-auto px-margin-mobile md:px-gutter max-w-container-max fade-in-section">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-alt/10 border border-outline/30 rounded-full mb-6 backdrop-blur-sm">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-surface-alt uppercase tracking-widest">Asociación Pampeana Oficial</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-white mb-6 uppercase tracking-tight">
+                        La institución que <span class="text-primary-fixed-dim">regula y promueve</span> el fisicoculturismo en La Pampa
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10 max-w-2xl leading-relaxed border-l-4 border-primary pl-4">
+                        Asociación Pampeana de Musculación y Fitness — formando atletas, organizando torneos de alto rendimiento y certificando profesionales desde la región bajo estrictos estándares.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="inline-flex justify-center items-center px-8 py-4 bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-primary-container transition-all duration-200 hover:-translate-y-1 shadow-lg shadow-primary/20" href="#contacto">
+                            Quiero asociarme
+                        </a>
+<a class="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-white text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-white/10 transition-all duration-200 hover:-translate-y-1 backdrop-blur-sm" href="#torneos">
+                            Ver próximos eventos
+                        </a>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white/50">arrow_downward</span>
+</div>
+</section>
+<!-- Value Proposition (Bento Grid Style) -->
+<section class="py-section-gap bg-background">
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max">
+<div class="text-center mb-16 fade-in-section">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4 uppercase">Pilares Institucionales</h2>
+<div class="w-16 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-in-section">
+<!-- Card 1 -->
+<div class="group bg-surface rounded-DEFAULT border border-outline-variant p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">military_tech</span>
+</div>
+<div class="w-12 h-12 bg-primary-container/10 rounded-DEFAULT flex items-center justify-center mb-6 border border-primary/20 text-primary">
+<span class="material-symbols-outlined">emoji_events</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 text-on-background">Torneos Oficiales</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Organizamos competencias bajo reglamentación estricta, garantizando escenarios profesionales, jurados certificados y el máximo nivel competitivo provincial y nacional.
+                        </p>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface rounded-DEFAULT border border-outline-variant p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300 relative overflow-hidden md:-translate-y-4">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">gavel</span>
+</div>
+<div class="w-12 h-12 bg-primary-container/10 rounded-DEFAULT flex items-center justify-center mb-6 border border-primary/20 text-primary">
+<span class="material-symbols-outlined">gavel</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 text-on-background">Regulación y Certificación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Establecemos los estándares de calidad para entrenadores y preparadores físicos, emitiendo certificaciones oficiales avaladas por las principales federaciones.
+                        </p>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface rounded-DEFAULT border border-outline-variant p-8 hover:shadow-lg hover:border-primary/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl">group</span>
+</div>
+<div class="w-12 h-12 bg-primary-container/10 rounded-DEFAULT flex items-center justify-center mb-6 border border-primary/20 text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3 text-on-background">Comunidad de Atletas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Asociate y formá parte de una red de profesionales y deportistas comprometidos con la disciplina, el desarrollo físico y el crecimiento de nuestro deporte.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us -->
+<section class="py-section-gap bg-surface-alt border-y border-outline-variant/50">
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center fade-in-section">
+<div class="relative">
+<!-- Image Container with decorative border -->
+<div class="relative p-2 border border-outline-variant rounded-DEFAULT bg-white shadow-sm z-10">
+<img alt="Comisión Directiva A.PA.MU.FI" class="w-full h-auto object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-500" data-alt="A formal group portrait of the A.PA.MU.FI executive committee and leading athletes. The team is dressed professionally, some in official athletic federative blazers and others in neat polos. They stand confidently in a modern, well-lit institutional setting, perhaps an office or a bright gymnasium hallway. The lighting is crisp and even, reflecting a corporate and highly official tone. The color palette emphasizes clean whites, professional grays, and touches of institutional blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmFgqIqcDiiL-Z2CxE4b949IOlP5ZDVnUBezkkRpa34q-ulqDtq8C3_g0QLi8MA8M52PKRQ15vyxJA1T7uJCttGvjKiHAwJ2Xjp6d0cxCspJwLGObeptoFZikUbLxva_GZ--IbnXz-N7_pmLtaJbYHJYEpZTbZAD1OcTidhkT0_yZkh2_pOpG21KSNZL4Ve39hun6I4qssDfBYb-A-Sny-_hMYxmTRSpD-Sl1mpne3wxssEuxJLeZgG8zbOtAtSOYZpqF-fTbwvKwp"/>
+</div>
+<!-- Background Accent -->
+<div class="absolute -bottom-4 -right-4 w-full h-full bg-surface-dim rounded-DEFAULT z-0 border border-outline-variant/50"></div>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 block">Nuestra Institución</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6 uppercase">Compromiso con la Excelencia Deportiva</h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant mb-8">
+<p>
+                                A.PA.MU.FI se fundó con la misión de jerarquizar el fisicoculturismo y el fitness en la provincia de La Pampa. No solo organizamos eventos, sino que velamos por la salud y el rigor deportivo de nuestros afiliados.
+                            </p>
+<p>
+                                Trabajamos en conjunto con instituciones prestigiosas como el <strong>Banco de La Pampa</strong> y contamos con el asesoramiento médico continuo de cardiólogos especialistas para asegurar que la práctica deportiva se realice bajo los más estrictos controles de salud.
+                            </p>
+</div>
+<div class="flex items-center gap-4 bg-surface p-4 border border-outline-variant rounded-DEFAULT mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<p class="font-label-sm text-label-sm text-on-background">Aval médico y protocolos cardiológicos estrictos para todos nuestros competidores federados.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-wider hover:text-primary-container transition-colors group" href="#contacto">
+                            Conocer la comisión directiva
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Personal Training (Dark Theme) -->
+<section class="py-section-gap bg-on-background text-white relative overflow-hidden" id="entrenamiento">
+<!-- Decorative geometric shapes -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-surface-tint/5 skew-x-12 translate-x-1/4 z-0 pointer-events-none"></div>
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center fade-in-section">
+<div class="order-2 lg:order-1">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-widest mb-2 block">Programa Oficial</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 uppercase text-white">Entrenamiento Personalizado</h2>
+<p class="font-body-md text-body-md text-surface-variant mb-8">
+                            Alcanzá tu máximo potencial físico con preparadores avalados por A.PA.MU.FI. Ya sea para competir o para mejorar tu salud integral, nuestros profesionales diseñan planes rigurosos y científicos.
+                        </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-body-md text-body-md text-surface-variant">Planificación estratégica orientada a hipertrofia, fuerza o recomposición corporal.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-body-md text-body-md text-surface-variant">Asesoramiento nutricional básico y seguimiento de métricas corporales.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-body-md text-body-md text-surface-variant">Preparación específica para posinng y puesta a punto pre-competitiva.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary-fixed-dim mt-0.5">check_circle</span>
+<span class="font-body-md text-body-md text-surface-variant">Supervisión técnica de ejecución para prevención de lesiones.</span>
+</li>
+</ul>
+<a class="inline-flex justify-center items-center px-8 py-4 bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-primary-container transition-all duration-200 hover:-translate-y-1" href="#contacto">
+                            Solicitar mi entrenador personalizado
+                        </a>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative border-4 border-surface/10 p-2 rounded-DEFAULT bg-on-background">
+<img alt="Entrenamiento Personalizado A.PA.MU.FI" class="w-full h-auto object-cover rounded-sm filter contrast-125" data-alt="A focused, professional personal training session in a modern, high-end athletic facility. A certified fitness coach in official A.PA.MU.FI apparel is closely instructing a dedicated athlete during a heavy lift. The lighting is dramatic yet clear, focusing on the intensity and correct biomechanics of the movement. The environment feels serious, regulated, and elite, highlighting the 'Federation Modernism' style with deep contrast and a metallic, institutional color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfnTmDWSQ_8vDzsRg7DFiFcc9lTzdQvFZ1YJY4c79-Ucs9N9bt-Ihs3d--OJuyQcrDGA7ChZ2MYogWRc6tZ6mlIA2GYqc-7KYzSHhSZX0xCVR3VWGNM-9ziGuHpGo62ppqJQx2ftJKbPVqb2bDXqI6enIdFZPb6psDWJSi-Bwy9GR9KnBrUrC38ciOkKCVtnAGR_4CJsMzWgLy-NPl9sWWrAfH47yotkxGOplFVRUlwvaTcFQyA6UWIn6DqO7YUL-DxSqhyb3wDY8r"/>
+<!-- Floating Badge -->
+<div class="absolute -bottom-6 -left-6 bg-surface text-on-surface p-4 rounded-DEFAULT shadow-xl border border-outline-variant hidden md:block">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+<div>
+<p class="font-label-sm text-label-sm font-bold">Profesionales Certificados</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">Aval Provincial</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Tournament Callout (Dark, high impact) -->
+<section class="py-section-gap bg-inverse-surface border-y border-outline/20 relative" id="torneos">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-on-background/90 z-0"></div>
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max relative z-10">
+<div class="text-center mb-12 fade-in-section">
+<span class="inline-block px-3 py-1 bg-secondary text-white font-label-sm text-label-sm uppercase tracking-widest rounded-full mb-4">Próximo Evento Oficial</span>
+<h2 class="font-headline-xl text-headline-xl text-white uppercase tracking-tight mb-2">Torneo Ernesto Piñeyro</h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-2xl mx-auto">Campeonato Provincial Abierto de Fisicoculturismo y Fitness.</p>
+</div>
+<!-- Info Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 fade-in-section">
+<div class="bg-on-surface/50 backdrop-blur-sm border border-outline/30 p-6 rounded-DEFAULT flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-3">calendar_month</span>
+<h4 class="font-label-sm text-label-sm text-surface-variant uppercase tracking-wider mb-1">Fecha</h4>
+<p class="font-headline-md text-headline-md text-white">15 de Noviembre</p>
+</div>
+<div class="bg-on-surface/50 backdrop-blur-sm border border-outline/30 p-6 rounded-DEFAULT flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-3">location_on</span>
+<h4 class="font-label-sm text-label-sm text-surface-variant uppercase tracking-wider mb-1">Locación</h4>
+<p class="font-headline-md text-headline-md text-white">Club Estudiantes, Santa Rosa</p>
+</div>
+<div class="bg-on-surface/50 backdrop-blur-sm border border-outline/30 p-6 rounded-DEFAULT flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-3">category</span>
+<h4 class="font-label-sm text-label-sm text-surface-variant uppercase tracking-wider mb-1">Categorías</h4>
+<div class="flex flex-wrap justify-center gap-2 mt-2">
+<span class="px-2 py-1 bg-surface/10 text-white text-[10px] font-semibold uppercase rounded">Bikini</span>
+<span class="px-2 py-1 bg-surface/10 text-white text-[10px] font-semibold uppercase rounded">Mens Physique</span>
+<span class="px-2 py-1 bg-surface/10 text-white text-[10px] font-semibold uppercase rounded">Classic</span>
+</div>
+</div>
+</div>
+<div class="text-center fade-in-section">
+<a href="#contacto" onclick="document.getElementById('motivo').value='Inscripción a Torneo'" class="inline-block px-10 py-4 bg-secondary hover:bg-secondary-container text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT transition-all duration-200 hover:-translate-y-1 shadow-lg shadow-secondary/30">
+                        Inscribirme al torneo
+                    </a>
+<p class="font-label-sm text-label-sm text-surface-variant mt-4 opacity-70">* Cierre de inscripciones 72hs antes del evento.</p>
+</div>
+</div>
+</section>
+<!-- Formation & Courses -->
+<section class="py-section-gap bg-surface-container-lowest" id="cursos">
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max">
+<div class="text-center mb-16 fade-in-section">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-2 block">Instituto Académico</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4 uppercase">Formación y Capacitación</h2>
+<div class="w-16 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 fade-in-section">
+<!-- Course 1 -->
+<div class="bg-surface border border-outline-variant rounded-DEFAULT overflow-hidden group flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<img alt="Curso Personal Trainer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A modern classroom setting or bright seminar room where a fitness expert is teaching anatomy or biomechanics to a group of attentive students. The image features a whiteboard or screen with muscular diagrams. The lighting is bright and educational, reflecting a clean 'Light Mode' institutional style. The colors are crisp whites, light grays, and institutional blue accents. The mood is academic, focused, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi7hw5JPJx8-3_PKDZsmPHGJO8_VS2cjBUdX7lsG3aLvApytenpNIRA-LzA0brjgsv6soMxb6P7yqpE5VNZvivfIMH6MhqCMwr4f7rV3qqLUzuMKpoBW5XDiX0ZZWBZUfLePsLkh3ctuduH4ZxqzNmjni77-Nf3WUHhcZBGhANGVsAX370TaHB81Hg5qbhAXAUyN6y0fSM-1xcAkfQdm_eEnmKgXQ5EVTNwB_8Pi4Iu5NbgwM4ntXYUQAan9gSvHbe4YFqdwBX4WN9"/>
+<div class="absolute top-4 left-4 bg-surface px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-on-background border border-outline-variant rounded flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+                                Certificado A.PA.MU.FI
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Personal Trainer Oficial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                                Formación integral en anatomía, biomecánica, nutrición deportiva y planificación del entrenamiento. El título habilitante más reconocido de la provincia.
+                            </p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/50">
+<span class="font-label-sm text-label-sm text-primary font-bold">Inicia: Marzo</span>
+<a class="text-on-background hover:text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 transition-colors cursor-pointer" onclick="openModal('modal-pt')">
+                                    Ver temario <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Course 2 -->
+<div class="bg-surface border border-outline-variant rounded-DEFAULT overflow-hidden group flex flex-col h-full">
+<div class="h-48 overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, dramatic shot of old-school heavy gym equipment (like a T-bar row or heavy dumbbells) in a very clean, modern facility. The image suggests intense, specialized training methodologies. The lighting is focused, highlighting the metallic textures against a clean, institutional background. The visual tone is serious, authoritative, and geared towards advanced bodybuilding techniques." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAmTD5Dnsa7SAK5xz3A7L6l02eo9loIZGPadff5fTzvePGJPvS7anXizghdwSJOKDO0TJBpJ9AmI6XFPZlMH4V-NHAeogtmSrgHBPCawYIX9uSma35UfgU32vqZG2AyDy7a4-Ueuxq4H38NkJwMhveNvXdnKrWED_-eofiAWLEN9w2HC8f-Y1rA9Rz5DxFMhJLa3wdqC9mU3plikQokQxEuG4MzOVud3FGFl7_zYBEx8PPFqfb2XC1KRnzMB903s4EEFuOeKU38bTM')"></div>
+<div class="absolute top-4 left-4 bg-surface px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-on-background border border-outline-variant rounded flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[14px]">verified</span>
+                                Certificado A.PA.MU.FI
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Masterclass: Heavy Duty &amp; Weider</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+                                Seminario avanzado sobre los sistemas de entrenamiento que forjaron la época dorada del culturismo. Análisis científico de la intensidad vs volumen.
+                            </p>
+<div class="flex justify-between items-center pt-4 border-t border-outline-variant/50">
+<span class="font-label-sm text-label-sm text-primary font-bold">Cupos Limitados</span>
+<a class="text-on-background hover:text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1 transition-colors cursor-pointer" onclick="openModal('modal-hd')">
+                                    Ver temario <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-20 bg-primary text-white text-center px-margin-mobile md:px-gutter border-y-4 border-primary-fixed-variant">
+<div class="container mx-auto max-w-4xl fade-in-section">
+<h2 class="font-headline-lg text-headline-lg mb-6 uppercase tracking-tight">¿Querés formar parte de A.PA.MU.FI?</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-10 max-w-2xl mx-auto">
+                    Si sos atleta, entrenador, o dueño de un gimnasio, tu afiliación fortalece nuestro deporte. Accedé a beneficios, avales oficiales y descuentos en competencias.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<a href="#contacto" onclick="document.getElementById('motivo').value='Afiliación de Atleta'" class="inline-block px-8 py-4 bg-white text-primary font-label-sm text-label-sm font-bold uppercase tracking-wider rounded-DEFAULT hover:bg-surface-container-lowest transition-all hover:-translate-y-1 shadow-lg shadow-black/10">
+                        Asociarme ahora
+                    </a>
+<a href="#contacto" onclick="document.getElementById('motivo').value='Otra consulta'" class="inline-block px-8 py-4 bg-transparent border border-white/50 text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-white/10 transition-all hover:-translate-y-1">
+                        Contactar a la comisión
+                    </a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap bg-background" id="contacto">
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 fade-in-section">
+<!-- Contact Info -->
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-8 uppercase">Contacto Institucional</h2>
+<div class="space-y-8 mb-10">
+<!-- Directive Board Contacts -->
+<div class="border border-outline-variant p-6 rounded-DEFAULT bg-surface">
+<h3 class="font-headline-md text-headline-md text-on-background border-b border-outline-variant/50 pb-3 mb-4">Comisión Directiva</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-background uppercase">José Albornoz</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Presidente — +54 9 2954 XX-XXXX</p>
+</div>
+</li>
+<li class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-background uppercase">Mario Canoba</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Vicepresidente — +54 9 2954 XX-XXXX</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">mail</span>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-background uppercase mb-1">Correo Oficial</p>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="mailto:info@apamufi.com.ar">info@apamufi.com.ar</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-2xl">location_on</span>
+<div>
+<p class="font-label-sm text-label-sm font-bold text-on-background uppercase mb-1">Sede Administrativa</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Santa Rosa, La Pampa, Argentina.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-surface p-8 border border-outline-variant rounded-DEFAULT shadow-sm">
+<h3 class="font-headline-md text-headline-md text-on-background mb-6 uppercase">Envianos tu consulta</h3>
+<form class="space-y-4">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="nombre">Nombre Completo</label>
+<input class="w-full bg-background border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="nombre" placeholder="Tu nombre" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="motivo">Motivo</label>
+<select class="w-full bg-background border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" id="motivo">
+<option>Afiliación de Atleta</option>
+<option>Afiliación de Gimnasio</option>
+<option>Inscripción a Curso</option>
+<option>Inscripción a Torneo</option>
+<option>Otra consulta</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-1" for="mensaje">Mensaje</label>
+<textarea class="w-full bg-background border border-outline-variant rounded-DEFAULT px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none" id="mensaje" placeholder="Escribí tu mensaje acá..." rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-on-background text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-primary transition-colors mt-4" type="button" onclick="enviarFormulario()">
+                                Enviar Mensaje
+                            </button>
+<div id="form-success" class="hidden mt-4 p-4 bg-primary/10 border border-primary/30 rounded-DEFAULT flex items-center gap-3">
+  <span class="material-symbols-outlined text-primary">check_circle</span>
+  <p class="font-body-md text-body-md text-on-background">¡Mensaje enviado! Nos pondremos en contacto a la brevedad.</p>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bottom-0 mt-section-gap bg-on-background dark:bg-surface-container-lowest border-t border-white/10">
+<div class="w-full py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between gap-gutter">
+<div class="mb-8 md:mb-0 max-w-sm">
+<h3 class="font-headline-md text-headline-md font-bold text-white dark:text-primary mb-4">A.PA.MU.FI</h3>
+<p class="font-body-md text-body-md text-surface-variant/70 mb-6">
+                    Asociación Pampeana de Musculación y Fitness. Entidad reguladora oficial del fisicoculturismo en la provincia de La Pampa.
+                </p>
+<a class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 text-white hover:bg-primary transition-colors border border-white/10" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<!-- Feather Icon for Instagram fallback -->
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="20" rx="5" ry="5" width="20" x="2" y="2"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+</a>
+</div>
+<div class="flex flex-col sm:flex-row gap-12">
+<div>
+<h4 class="font-label-sm text-label-sm text-white uppercase tracking-wider mb-4 opacity-50">Enlaces Rápidos</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all" href="#inicio">Inicio</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all" href="#torneos">Torneos</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all" href="#cursos">Cursos</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all" href="#contacto">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-white uppercase tracking-wider mb-4 opacity-50">Legal</h4>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all cursor-pointer" onclick="openModal('modal-privacidad')">Privacidad</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all cursor-pointer" onclick="openModal('modal-terminos')">Términos</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all cursor-pointer" onclick="openModal('modal-federacion')">Federación</a></li>
+<li><a class="font-body-md text-body-md text-surface-variant/70 hover:text-white hover:underline transition-all" href="#contacto">Prensa</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 py-6">
+<div class="container mx-auto px-margin-mobile md:px-gutter max-w-container-max text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-surface-variant/50">
+                    © 2024 Asociación Pampeana de Musculación y Fitness. Todos los derechos reservados.
+                </p>
+<p class="font-label-sm text-label-sm text-surface-variant/30 flex items-center gap-1">
+                    Diseñado bajo estándares oficiales.
+                </p>
+</div>
+</div>
+</footer>
+<!-- ===== MODALES ===== -->
+<!-- Modal Temario Personal Trainer -->
+<div id="modal-pt" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-on-background/70 backdrop-blur-sm" onclick="closeModal('modal-pt')"></div>
+  <div class="relative bg-surface rounded-DEFAULT border border-outline-variant shadow-2xl max-w-lg w-full p-8 z-10">
+    <button onclick="closeModal('modal-pt')" class="absolute top-4 right-4 text-on-surface-variant hover:text-on-background"><span class="material-symbols-outlined">close</span></button>
+    <div class="flex items-center gap-3 mb-6">
+      <span class="material-symbols-outlined text-primary text-3xl">school</span>
+      <h3 class="font-headline-md text-headline-md text-on-background uppercase">Personal Trainer Oficial</h3>
+    </div>
+    <ul class="space-y-3 mb-6">
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Anatomía funcional y biomecánica aplicada al entrenamiento</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Fisiología del ejercicio y adaptaciones neuromusculares</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Nutrición deportiva básica y avanzada</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Planificación y periodización del entrenamiento</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Preparación para competencia y posing</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Primeros auxilios y protocolos cardiológicos</span></li>
+    </ul>
+    <a href="#contacto" onclick="closeModal('modal-pt'); document.getElementById('motivo').value='Inscripción a Curso'" class="inline-flex justify-center items-center w-full py-3 bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-primary-container transition-colors">
+      Inscribirme a este curso
+    </a>
+  </div>
+</div>
+
+<!-- Modal Temario Heavy Duty -->
+<div id="modal-hd" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-on-background/70 backdrop-blur-sm" onclick="closeModal('modal-hd')"></div>
+  <div class="relative bg-surface rounded-DEFAULT border border-outline-variant shadow-2xl max-w-lg w-full p-8 z-10">
+    <button onclick="closeModal('modal-hd')" class="absolute top-4 right-4 text-on-surface-variant hover:text-on-background"><span class="material-symbols-outlined">close</span></button>
+    <div class="flex items-center gap-3 mb-6">
+      <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+      <h3 class="font-headline-md text-headline-md text-on-background uppercase">Heavy Duty &amp; Weider</h3>
+    </div>
+    <ul class="space-y-3 mb-6">
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Historia y fundamentos del sistema Heavy Duty (Mike Mentzer)</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Principios Weider: aplicación práctica y científica</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Intensidad vs. Volumen: análisis y debate actual</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Técnicas avanzadas: rest-pause, drop sets, pre-exhaustion</span></li>
+      <li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-sm mt-0.5">check</span><span class="font-body-md text-body-md text-on-surface-variant">Diseño de rutinas para culturismo avanzado y competencia</span></li>
+    </ul>
+    <a href="#contacto" onclick="closeModal('modal-hd'); document.getElementById('motivo').value='Inscripción a Curso'" class="inline-flex justify-center items-center w-full py-3 bg-primary text-white font-label-sm text-label-sm uppercase tracking-wider rounded-DEFAULT hover:bg-primary-container transition-colors">
+      Inscribirme a este curso
+    </a>
+  </div>
+</div>
+
+<!-- Modal Privacidad -->
+<div id="modal-privacidad" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-on-background/70 backdrop-blur-sm" onclick="closeModal('modal-privacidad')"></div>
+  <div class="relative bg-surface rounded-DEFAULT border border-outline-variant shadow-2xl max-w-lg w-full p-8 z-10 max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('modal-privacidad')" class="absolute top-4 right-4 text-on-surface-variant hover:text-on-background"><span class="material-symbols-outlined">close</span></button>
+    <h3 class="font-headline-md text-headline-md text-on-background uppercase mb-4">Política de Privacidad</h3>
+    <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+      <p>A.PA.MU.FI recopila únicamente los datos personales necesarios para gestionar afiliaciones, inscripciones a torneos y cursos, y comunicaciones institucionales.</p>
+      <p>Los datos proporcionados a través del formulario de contacto son utilizados exclusivamente para responder consultas y no son compartidos con terceros.</p>
+      <p>Los datos de competidores federados (nombre, categoría, resultados deportivos) pueden ser publicados en medios oficiales de la asociación en cumplimiento de los reglamentos de competencia.</p>
+      <p>Para ejercer derechos de acceso, rectificación o eliminación de datos, contactarse a <strong>info@apamufi.com.ar</strong>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Términos -->
+<div id="modal-terminos" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-on-background/70 backdrop-blur-sm" onclick="closeModal('modal-terminos')"></div>
+  <div class="relative bg-surface rounded-DEFAULT border border-outline-variant shadow-2xl max-w-lg w-full p-8 z-10 max-h-[80vh] overflow-y-auto">
+    <button onclick="closeModal('modal-terminos')" class="absolute top-4 right-4 text-on-surface-variant hover:text-on-background"><span class="material-symbols-outlined">close</span></button>
+    <h3 class="font-headline-md text-headline-md text-on-background uppercase mb-4">Términos y Condiciones</h3>
+    <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+      <p>La afiliación a A.PA.MU.FI implica la aceptación del estatuto institucional y el reglamento deportivo vigente.</p>
+      <p>Los competidores deben presentar apto médico cardiológico vigente para participar en torneos oficiales. A.PA.MU.FI se reserva el derecho de descalificar a quienes no cumplan con los protocolos de salud establecidos.</p>
+      <p>Las inscripciones a torneos no son reembolsables pasadas las 72 horas previas al evento.</p>
+      <p>Las certificaciones emitidas por A.PA.MU.FI son válidas en el ámbito provincial y están avaladas por las federaciones nacionales adheridas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Federación -->
+<div id="modal-federacion" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div class="absolute inset-0 bg-on-background/70 backdrop-blur-sm" onclick="closeModal('modal-federacion')"></div>
+  <div class="relative bg-surface rounded-DEFAULT border border-outline-variant shadow-2xl max-w-lg w-full p-8 z-10">
+    <button onclick="closeModal('modal-federacion')" class="absolute top-4 right-4 text-on-surface-variant hover:text-on-background"><span class="material-symbols-outlined">close</span></button>
+    <div class="flex items-center gap-3 mb-6">
+      <span class="material-symbols-outlined text-primary text-3xl">corporate_fare</span>
+      <h3 class="font-headline-md text-headline-md text-on-background uppercase">Federación</h3>
+    </div>
+    <div class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+      <p>A.PA.MU.FI es la entidad reguladora oficial del fisicoculturismo y fitness en la Provincia de La Pampa, Argentina.</p>
+      <p>Trabajamos en articulación con las principales federaciones nacionales para garantizar que nuestros atletas puedan competir en el circuito nacional e internacional.</p>
+      <p>Nuestra institución cuenta con el respaldo del <strong>Banco de La Pampa</strong> y el asesoramiento de especialistas en medicina del deporte.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+        // Modal Logic
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('[id^="modal-"]').forEach(m => {
+                    m.classList.add('hidden');
+                    m.classList.remove('flex');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Form submit logic
+        function enviarFormulario() {
+            const nombre = document.getElementById('nombre').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+            if (!nombre || !mensaje) {
+                alert('Por favor completá tu nombre y mensaje antes de enviar.');
+                return;
+            }
+            document.getElementById('form-success').classList.remove('hidden');
+            document.getElementById('nombre').value = '';
+            document.getElementById('mensaje').value = '';
+        }
+</script>
+
+<script>
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const navDrawer = document.getElementById('nav-drawer');
+        const drawerOverlay = document.getElementById('drawer-overlay');
+
+        function openMenu() {
+            navDrawer.classList.remove('-translate-x-full');
+            drawerOverlay.classList.remove('hidden');
+            // Small delay to allow display:block to apply before animating opacity
+            setTimeout(() => {
+                drawerOverlay.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            navDrawer.classList.add('-translate-x-full');
+            drawerOverlay.classList.add('opacity-0');
+            setTimeout(() => {
+                drawerOverlay.classList.add('hidden');
+            }, 300); // match transition duration
+            document.body.style.overflow = '';
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        drawerOverlay.addEventListener('click', closeMenu);
+        
+        // Close menu on link click
+        const drawerLinks = navDrawer.querySelectorAll('a');
+        drawerLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body></html>

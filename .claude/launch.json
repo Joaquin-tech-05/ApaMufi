@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "apamufi",
+      "runtimeExecutable": "C:\\Program Files\\Git\\usr\\bin\\perl.exe",
+      "runtimeArgs": ["C:\\Users\\estudiante\\Desktop\\stitch_portal_institucional_a.pa.mu.fi\\server.pl", "C:\\Users\\estudiante\\Desktop\\stitch_portal_institucional_a.pa.mu.fi", "8080"],
+      "port": 8080
+    }
+  ]
+}
